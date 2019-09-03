@@ -1,0 +1,308 @@
+//This is the styling for the content
+//where you speak of yourself, and the sale pitch
+
+//THE STYLING IS DESKTOP THEN MOBILE
+
+
+
+
+//Whole container content
+.startContent
+  position: absolute
+  top:      20%
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    top: 0%
+
+.friendsPic
+  max-width:     100%
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    +paddingSizing(60px, 10px, 80px, 0px)
+    max-width:   80%
+
+//Start Heading Styling "Before We Start"
+.startHeading
+  +fontMix($font-pReg, 5vw)
+  padding-top: 40px
+  padding-bottom: 40px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:  10vw
+    text-align: center
+
+//"Let's Talk About Me" styling
+.talkOfMe
+  +fontMix($font-pLight, 4vw)
+  padding-bottom: 40px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:  4.5vw
+    text-align: center
+
+//Paragraph of Sales Pitch Styling
+.beenThere
+  +fontMix($font-hLight, 2vw)
+  line-height:  0.8cm
+  padding-left: 20px
+  color: $dark-aquamarine
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:    3vw
+    +paddingSizing(0px, 0px, 15px, 5px)
+    line-height:  0.5cm
+
+//Charisma Types Header (H2)
+.ctHeader
+  +fontMix($font-pReg, 4vw)
+  text-transform: uppercase
+  text-align:     center
+  padding-top:    20px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:      5vw
+    text-transform: uppercase
+    text-align:     center
+    padding-top:    20px
+
+//Charisma Types Styling, Entire List
+.charismaTypes
+  +fontMix($font-pReg, 3vw)
+  background-color: $midnight-blue
+  text-align:       center
+  width:            40%
+  margin-top:       40px
+  +paddingSizing(20px,20px,0px,0px)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:        5vw
+    background-color: $midnight-blue
+    border-radius:    2px
+    padding-top:      10px
+    padding-bottom:   10px
+    text-align:       center
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    margin-top:   20px
+    margin-left:  95px
+    width:        50%
+    font-size:    3.1vw
+
+//Each List Item Syling
+.cTypes
+  list-style-type: none
+  color: $white
+  +paddingSizing(20px,20px,0px,0px)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    +paddingSizing(10px,5px,0,0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*THIS IS THE STYLING FOR THE PACKAGES WHEN YOU CALL JAY*/
+.firstCardsContent
+  position: absolute
+  top:      350%
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    top:   300%
+    right: 5%
+
+
+
+/*STYLING FOR PHONE CALL CARDS GO HERE FIRST*/
+//Header Description
+.packagePhoneHeader
+  color:          $midnight-blue
+  text-transform: uppercase
+  text-align:     center
+  +fontMix($font-pReg, 4vw)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:    5vw
+    text-align:   center
+    padding-left: 40px
+
+
+//Move the call cards down
+.row-call
+  padding-top:  2%
+  padding-left: 10%
+
+//Put the call cards side by side on desktop
+.column-call
+  float: left
+  width: 30%
+  +paddingSizing(0,0,50px,40px)
+
+// Remove extra left and right margins, due to padding
+.row-call
+  margin: 0 -5px
+
+//Clear floats after the columns
+.row-call:after
+  content: ""
+  display: table
+  clear:   both
+
+// Style the individual Cards
+.card
+  padding:           16px
+  text-align:        center
+  background-color:  #f1f1f1
+  padding-left:      100px
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
+//Card Header Title Styling
+.cardHeader
+  font-size: 2vw
+  color: $midnight-blue
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size: 3.8vw
+
+.cardPrice
+  font-size: 1.8vw
+  color: $midnight-blue
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size: 2.8vw
+
+
+
+//Card Paragraph Styling
+.cardParagraph
+  font-size:   1.5vw
+  line-height: 20px
+  color: $dark-aquamarine
+  padding-top: 20px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:   2.8vw
+    line-height: 13px
+    padding-top: 5px
+
+//Card List
+.cardList
+  font-size:       1.5vw
+  text-decoration: underline $midnight-blue
+  list-style-type: none
+  text-align:      center
+  padding-top:     10px
+  line-height:     30px
+  color: $dark-aquamarine
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:       2.5vw
+    line-height:     20px
+
+//Card Button "Let's Improve you"
+.letsConnect
+  font-size:          2.8vw
+  background-color:   $midnight-blue
+  color:              $white
+  margin-top:         10px
+  margin-bottom:      10px
+  -webkit-transition: 0.4s
+  transition:         0.4s
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:        2.5vw
+    margin-top:       10px
+    +paddingSizing(10px, 10px, 10px, 10px)
+
+//Let's Connect Button Styling
+.letsConnect:hover
+  -webkit-transition-timing-function: ease-in-out
+  transition-timing-function:         ease-in-out
+  background-color:  $white
+  color:             $black
+  border-color:      $midnight-blue
+  border-radius:     2px
+  font-size:         2.4vw
+  transform: scale(0.9)
+
+//Responsive columnns, Cards
+@media screen and (max-width: 600px)
+  .column-call
+    width:         100%
+    display:       block
+    margin-bottom: 20px
+
+/*END OF THE CALLING PACKAGES STYLING*/
+
+
+
+
+
+
+/*NOW IT'S THE TIME FOR THE "IN PERSON" PACKAGES STYLING*/
+//Move the whole cards down as a whole
+.secondCardsContent
+  @extend .firstCardsContent
+  top:      580%
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:    5vw
+    text-align:   center
+    padding-left: 0px
+    top:          600%
+
+//Package In Person Header Styling
+.packagePerson
+  @extend .packagePhoneHeader
+  padding-left: -10px
+  padding-top:   40px
+  padding-bottom: 40px
+
+
+//Move the call cards down
+.column-person
+  float: left
+  width: 30%
+  +paddingSizing(40px,0,100px,40px)
+
+//Put the call cards side by side on desktop
+
+//Cards to be styled for phone
+.card-phone
+  @extend .card
+  width:   100%
+
+
+//Responsive columnns, Cards
+@media screen and (max-width: 600px)
+  .column-person
+    width:         100%
+    display:       block
+    margin-bottom: 20px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FOOTER STYLING
+.services
+  top: 950%
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    top: 950%

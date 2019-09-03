@@ -1,0 +1,121 @@
+//MIXINS FOR FONTS START HERE
+=fontMix($fontFamily-Value, $fontSize-Value)
+  font-family: $fontFamily-Value
+  font-size:   $fontSize-Value
+
+//MIXIN FOR CONTENT OVERLAY
+=content-overlay-general()
+  background-color:     $grey
+  z-index:              1
+  opacity:              0.4
+
+//MIXINS FOR BORDER RADIUS
+=border-radius-kit($border-radius-value)
+  -webkit-border-radius: $border-radius-value
+  -moz-border-radius:    $border-radius-value
+  border-radius:         $border-radius-value
+
+//MIXIN FOR IMAGE SIZING W/ MAX HEIGHT AND WIDTH
+=imageSizing($maxHeight, $maxWidth, $height, $width)
+  max-height: $maxHeight
+  max-width:  $maxWidth
+
+  height:     $height
+  width:      $width
+
+//MIXIN FOR TEXT SHADOW IS HERE
+=textShadow($x-Value, $y-Value, $blurRadius, $color)
+  text-shadow: $x-Value $y-Value $blurRadius $color
+
+//MIXIN FOR WEBKIT BORDER BOX SIZING IS HERE
+=borderBox()
+  -webkit-box-sizing: border-box
+  box-sizing:         border-box
+
+//MIXIN FOR WEB BACKGROUND SIZING IS HERE
+=webBackgroundSizing($background-value)
+  -webkit-background-size:  $background-value
+  background-size:          $background-value
+
+//MIXIN FOR PADDING SIZES FROM TOP, BOTTOM, LEFT AND RIGHT!
+=paddingSizing($top, $bottom, $left, $right)
+  padding-top:      $top
+  padding-bottom:   $bottom
+  padding-left:     $left
+  padding-right:    $right
+
+//BLUR MIXIN FOR IMAGES
+=blur-image($value)
+  -webkit-filter: blur($value)
+  filter: blur($value)
+
+// SCALE MIXIN FOR SCALING OBJECTS ON HOVER
+=scaleObject($scale-value)
+  -webkit-transform: scale($scale-value)
+  -ms-transform: scale($scale-value)
+  transform: scale($scale-value)
+
+//BOX MIXINS FOR CREATING BOXES
+=boxMixin($bg-color, $width, $height, $border-radius-box)
+  background-color:  $bg-color
+  width:             $width
+  height:            $height
+  border-radius:     $border-radius-box
+
+//SKEW MIXIN FOR CONTACT PAGE ONLY
+=skewMixin-contact($left-skew-deg, $down-skew-deg)
+  -ms-transform: skew($left-skew-deg, $down-skew-deg)
+  -webkit-transform: skew($left-skew-deg, $down-skew-deg)
+  transform: skew($left-skew-deg, $down-skew-deg)
+
+//GRADIENT MIXIN GOES HERE
+=linearGradient($top, $bottom)
+  background: $top
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom))
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%)
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%)
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%)
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 )
+
+//Button Mixin is Here
+=whiteButtonCTA($font-size, $positionValue)
+  position:       $positionValue
+  font-size:      $font-size
+  letter-spacing: 2px
+  text-transform: uppercase
+  display:        inline-block
+  text-align:     center
+  width:          270px
+  font-weight:    bold
+  padding:        14px 0px
+  border:         3px solid $midnight-blue
+  border-radius:  2px
+  box-shadow:     0 2px 10px rgba(0,0,0,0.16), 0 3px 6px
+  &:before
+    -webkit-transition: 0.5s all ease
+    transition:         0.5s all ease
+    position:           absolute
+    left:               50%
+    right:              50%
+    bottom:             0
+    opacity:            0
+    content:            ''
+    background-color:   $midnight-blue
+    z-index:            -2
+  &:hover
+    &:before
+      -webkit-transition: 0.5s all ease
+      transition:         0.5s all ease
+      left:               0
+      right:              0
+      opacity:            1
+
+
+//Background Image Gradient
+=backgroundImageGradient($position, $firstColor, $secondColor)
+  background-image: -webkit-linear-gradient($position, $firstColor, $secondColor)
+  background-image: -moz-linear-gradient($position, $firstColor, $secondColor)
+  background-image: -ms-linear-gradient($position, $firstColor, $secondColor)
+  background-image: -o-linear-gradient($position, $firstColor, $secondColor)

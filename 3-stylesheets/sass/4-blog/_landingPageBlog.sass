@@ -1,0 +1,183 @@
+.blogWrapper
+  padding-top: 100px
+
+/* Add a gray background color with some padding */
+body
+  font-family: Arial
+  padding: 20px
+
+
+
+/* Header/Blog Title */
+.header
+  padding:       30px
+  font-size:     40px
+  text-align:    center
+  background:    white
+  border-radius: 2px
+  line-height:   40px
+  +fontMix($font-hReg, 4vw)
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn
+  float: left
+  width: 75%
+
+
+/* Right column */
+.rightcolumn
+  float: left
+  width: 25%
+  padding-left: 20px
+
+
+/* Fake image */
+.blogPics
+  max-width:     100%
+  max-height:    auto
+
+// EACH individual BLOG Picture
+//EDIT AS YOU MAKE MORE POSTS
+#blogPicOne
+  padding-right: 30px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-left: 70px
+
+
+#blogPicTwo
+  padding-right: 700px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width:  20%
+    height: 20%
+    padding-left: 60px
+
+
+
+/* Add a card effect for the cards */
+.card
+  background-color: white
+  padding: 20px
+  margin-top: 20px
+  border-radius: 2px
+
+.blogHeading
+  +fontMix($font-hReg, 3vw)
+  line-height: 80px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 5vw
+
+// AGD TO GRAB THE READER
+.agdParagraph
+  +fontMix($font-hReg, 1.8vw)
+  padding-top: 10px
+  color: $dark-aquamarine
+
+//Summary of the blog while linking them to the actual blog page
+.summaryParagraph
+  +fontMix($font-hLight, 1.9vw)
+  color: $black
+  line-height: 30px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    line-height: 17px
+    font-size:   2.3vw
+
+.dateDescription
+  color: $black
+
+
+/* Clear floats after the columns */
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+/*ABOUT ME CARD STYLING*/
+.aboutMeHeading
+  font-size: 3vw
+  line-height: 50px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    line-height: 20px
+
+//ABOUT ME PARAGRAPH STYLING
+.aboutMeParagraphBlog
+  padding-top: 15px
+  font-size:   1.1vw
+  color:       $dark-aquamarine
+  line-height: 20px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 2.1vw
+
+#aboutMePFP
+  display:       block
+  margin-left:   auto
+  margin-right:  auto
+  width:         80%
+  height:        20%
+  padding-top:   20px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width: 40%
+
+
+/*GET MY BOOK STYLING HERE*/
+.bookHeader
+    color: $light-blue
+
+//Book CTA Styling Header
+.bookCTA
+  color: $dark-aquamarine
+
+//Book Badge Styling Below
+.bookCTABadge
+  max-width: 65%
+  height: auto
+
+
+/* Follow Me Card Styling Starts Here*/
+
+//followMe header
+.followMe
+  +fontMix($font-pReg, 1.5vw)
+  text-align:     center
+  padding-bottom: 5px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 3vw
+
+//Follow Me Links
+.followMeLinks
+  @extend .followMe
+  font-size: 1.3vw
+  +paddingSizing(5px, 5px, 0px, 0px)
+  list-style-type: none
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 2vw
+
+
+//POD IMAGES BADGES SIZING
+.podImage
+  max-width:      100%
+  margin-top:     10px
+  padding-bottom: 5px
+  display:        block
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    display: block
+
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px)
+  .leftcolumn, .rightcolumn
+    width:  100%
+    padding: 0

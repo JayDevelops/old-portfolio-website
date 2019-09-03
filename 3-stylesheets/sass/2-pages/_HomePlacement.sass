@@ -1,0 +1,452 @@
+/* HOME PLACEMENTS GOES SUCH AS TEXT AND IMAGES HERE*/
+/* SUCH AS PADDING AND TOP AND POSITION, ETC.*/
+body
+  position:   absolute
+  left:       -20px
+  width:      100%
+  height:     100%
+  background: #fff
+  @media (min-width: 600px)
+    top:  -50px
+    position:   absolute
+
+
+/*HEADING ONE PLACEMENT 'title' FOR LANDING PAGE GOES HERE*/
+h1.title
+  +paddingSizing(190px, 5px, 50px, 0px)
+  text-align: center
+
+  //Desktop STYLING
+  @media (min-width: 1200px)
+    font-size: 6.5vw
+
+  //!IPad STYLING
+  @media (min-width: 600px) and (max-width: 1199px)
+    font-size: 6vw
+
+  //!FOR IPHONE 6, 7, 8
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    font-size:    9vw
+    padding-left: 30px
+
+/*HEADING TWO PLACEMENT 'title-two' FOR LANDING PAGE GOES HERE*/
+h2.title-two
+  +paddingSizing(60px, 40px, 50px, 0px)
+  text-align: center
+
+  //Desktop STYLING
+  @media (min-width: 1200px)
+    font-size:  6vw
+
+  //!IPad STYLING
+  @media (min-width: 600px) and (max-width: 1199px)
+    font-size:  5.4vw
+
+  //!FOR IPHONE 6, 7, 8
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    padding-left: 30px
+    font-size:    8.2vw
+
+
+
+
+/*PARAGRAPH PLACEMENT 't-par' FOR LANDING PAGE GOES HERE*/
+.t-par
+  padding-left: 5px
+  padding-top:  25px
+  z-index:      1
+  width:        50%
+  color:        #fff
+  text-align:   center-right
+  font-size:    1.5vw
+  color:        $white
+  line-height:  35px
+
+
+  //!IPad STYLING
+  @media (min-width: 600px)
+    font-size:   2.8vw
+    width:       48%
+
+  //!FOR IPHONE 6, 7, 8
+  @media (min-width: 375px)
+    padding-left: 33px
+    width: 50%
+    font-size:    4vw
+
+
+
+
+
+
+//THIS IS THE FIRST CONTENT AFTER THE INTRODUCTION
+
+//Background for the email
+.emailBG-blue
+  background-color: $midnight-blue
+  position: absolute
+  width:    100%
+  height:   100%
+  z-index:  -10
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width:    100%
+    height:   100%
+
+
+
+
+
+/*Landing Page Signup for weekly newsletter*/
+//Subscribe Heading
+.subscribe
+  font-size:        2.7vw
+  color:            $midnight-blue
+  background-color: $white
+  text-transform:   capitalize
+  width:            30%
+  float:            left
+  text-align:       right
+  margin-left:      30px
+  margin-top:       80px
+  line-height:      50px
+  +paddingSizing(20px, 20px, 25px, 25px)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:         4.6vw
+    width:             80%
+    float:             none
+    text-align:        left
+    background-color:  transparent
+    color:             $white
+    margin-top:        -80px
+    line-height:        20px
+    +paddingSizing(0px, 0px, 0px, 0px)
+
+  //FOR IPADS, IN GENERAL, STYLING
+  @media only screen and (min-device-width : 1000px) and (min-device-width : 900px) and (max-width: 600px)
+    line-height:  30px
+    margin-top:   80px
+
+//Subscribe Text
+.subscribeText
+  font-size:         1.3vw
+  color:             $white
+  background-color:  $pastel-blue
+  width:             30%
+  float:             left
+  margin-left:       10px
+  margin-top:        -200px
+  line-height:       30px
+  +paddingSizing(20px, 20px, 25px, 25px)
+  //FOR IPADS, IN GENERAL, STYLING
+  @media only screen and (min-device-width : 900px) and (max-width: 600px)
+    line-height:       10px
+    margin-top:        200px
+    background-color:  transparent
+    line-height:       15px
+
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:      3.2vw
+    width:          80%
+    padding-top:    25px
+    float:          none
+    margin-top:     -20px
+    background-color:  transparent
+    line-height:       13px
+
+
+/*The Actual Email Signup Form Styling*/
+//Moves the whole email form up and down and the text inside
+#mc_embed_signup
+  margin-top: 390px
+  clear:      left
+  z-index:    10
+  //!FOR MOBILE DEVICES STYLES
+  @media only screen and (max-width: 600px)
+    margin-top: 380px
+  // //Iphone X Styling Size
+  // @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait)
+  //   margin-top: 500px
+  // //Iphone 8 Styling Size
+  // @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+  //   margin-top: 320px
+  // //Iphone 8 Plus Sytling Sizes
+  // @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait)
+  //   margin-top: 380px
+
+
+//The below shifts the whole singup form (ONLY THE SIGNUP FORM), excluding the header and paragraphs
+.emailNameResponse
+  float:   right
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    float: none
+
+//MC Field Group is the individual boxes
+.mc-field-group
+  color:         $white
+  font-size:     1.9vw
+  padding-right: 40px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin-top:    0px
+    margin-bottom: 20px
+    margin-left:   40px
+    font-size:     4vw
+
+//Email Box (Let's make it transparent)
+#mce-EMAIL
+  background-color: transparent
+  border-top:       none
+  border-left:      none
+  border-right:     none
+  color:            $white
+  border-bottom:    solid 1.5px $pastel-blue
+  padding-top:      15px
+  margin-bottom:    30px
+  width:            100%
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top:      5px
+    width:            85%
+    margin-bottom:    5px
+
+//The Placeholder inside the box, not the actual text
+#mce-EMAIL::placeholder
+  color:      $lightest-gray
+  font-size:  1vw
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 3.1vw
+
+//Now its the Box for the Name, make it transparent
+#mce-FNAME
+  @extend #mce-EMAIL
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top:      5px
+    width:            85%
+    margin-bottom:    5px
+
+//Now its the "Indicates Required" text
+.indicates-required
+  color: $white
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:     1.8vw
+    float:         right
+    padding-right: 50px
+    padding-top:   -20px
+
+
+//Now it's the button, make it pop with color
+#mc-embedded-subscribe
+  color:              $midnight-blue
+  text-decoration:    none
+  -webkit-transition: 0.3s all ease
+  transition:         0.3s ease all
+  &:hover
+    color: $dark-aquamarine
+
+  &:focus
+    color: $dark-aquamarine
+
+//Now the design of the button
+#mc-embedded-subscribe
+  +whiteButtonCTA(18px, relative)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding:     8px 0px
+    width:       190px
+    font-size:   14px
+    margin-top:  -10px
+    margin-left: 35px
+
+
+
+
+
+
+
+
+/*Happiness Content, link people to podcast and sell your book */
+.happinessContent
+  padding-top: 490px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top: 90px
+
+//Happy Text Header
+.happyLifeHeader
+  +fontMix($font-pReg, 4vw)
+  text-transform: capitalize
+  width:          60%
+  line-height:    70px
+  float:          left
+  +paddingSizing(40px, 0px, 40px, 0px)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:     6vw
+    width:         80%
+    float:         none
+    line-height:   25px
+    +paddingSizing(30px, 0px, 0px, 0px)
+
+//Bonus Header
+.bonusHeader
+  +fontMix($font-pReg, 2.3vw)
+  +paddingSizing(100px, 90px, 40px, 0px)
+  text-transform: capitalize
+  width:          60%
+  line-height:    40px
+  float:          left
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:     4vw
+    width:         80%
+    float:         none
+    line-height:   20px
+    +paddingSizing(10px, 0px, 0px, 0px)
+
+
+
+//Happy Text Paragraph (Transiton to Podcast)
+.happyParagraph
+  +fontMix($font-hReg, 1.5vw)
+  line-height: 25px
+  color: $dark-aquamarine
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin-top:  10px
+    font-size:   4vw
+    width:       80%
+    line-height: 18px
+
+
+
+//This is each Individual Mockup Image for the podcast
+.podcastMockupImage
+  max-width:  500px
+  max-height: 500px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    max-width:  600px
+    max-height: 400px
+
+
+
+/*This is the mobile text captions, which links people to the podcast
+  Hide it on Desktop as we will show buttons on Desktop*/
+.mobileText
+  //Let's hide this on desktop first
+  display: none
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:  3vw
+    display:    block
+    width:      80%
+    text-align: center
+    color:      $dark-aquamarine
+    +paddingSizing(0, 0, 50px, 0px)
+
+
+
+
+
+
+/*Now let's do the styling of Inspiree, move it down*/
+.inspireeFeed
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top: 80px
+
+//Let's style the header "Want More Charismatic Mindsets"...
+.inspireeHeader
+  +fontMix($font-pReg, 4vw)
+  @extend .happyLifeHeader
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 6vw
+    width:     70%
+
+//Let's style inspiree Paragraph
+.inspireeParagraph
+  @extend .happyParagraph
+  padding-top: 50px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:   4vw
+    width:       70%
+    padding-top: 10px
+
+
+
+
+
+
+/*BLOG CONTENT GOES HERE*/
+
+//Blue Background box goes below
+.blueBlogBackground
+  width:            50%
+  height:           80%
+  background-color: $midnight-blue
+  display:          inline-block
+  border-radius:    2px
+  margin-top:       190px
+  margin-right:     340px
+  margin-left:      340px
+  +paddingSizing(30px, 30px, 20px, 20px)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin-left:      15px
+    margin-right:     10px
+    margin-top:       40px
+    width:            100%
+    height:           100%
+
+
+
+//Blog Direct Header "Read My Blog" below
+.blogDirectHeader
+  color:      $white
+  text-align: center
+  +fontMix($font-pReg, 3vw)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:   7vw
+    text-align:  center
+    padding-top: 40px
+
+//blogClickHeader
+.blogClickHeader
+  text-align:     left
+  color:          $white
+  text-transform: capitalize
+  font-size:      2vw
+  text-align:     center
+  padding-top:    20px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:  4.5vw
+    +paddingSizing(10px, 40px, 30px, 15px)
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER PLACEMENT FOR HOME*/
+footer.home
+  top: 410%
+  padding-bottom: 1em
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    top: 540%

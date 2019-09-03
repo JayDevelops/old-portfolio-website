@@ -1,0 +1,32 @@
+/*!HEADING STYLING GO HERE,
+  BASICALLY ANY BIG TEXT GOES HERE!
+  !UNIVERSAL HEADING STYLINGS GO HERE, FROM THE
+  HOME PAGE GOES RIGHT HERE DO
+  NOTE THIS DOESNT PUT THE PLACEMENTS OF THINGS!*/
+
+//!UNIVERSAL STYLING FOR ALL LINKS
+a:link
+  color: $white
+  &:visited
+    color: $deep-cerulean
+    &:hover
+      color: $pastel-blue
+      &:active
+        color: $light-blue
+
+//!UNIVERSAL STYLING FOR ALL 'H1'
+h1
+  +fontMix($font-hReg, 8.5vw)
+  color: $black
+  z-index: 1
+
+//!UNIVERSAL STYLING FOR ALL 'H2'
+h2
+  @extend h1
+  font-size: 7.5vw
+  color: $midnight-blue
+
+//!UNIVERSAL STYLING FOR ALL 'P'
+p
+  +fontMix($font-pLight, 2vw)
+  line-height: 30px

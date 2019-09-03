@@ -1,0 +1,163 @@
+/*THIS IS EACH INDIVIDUAL BLOG POST, WHICH WILL BE UPLOADED EVERY THURSDAY OF THE WEEK!*/
+
+
+//Moves the entire blog to the center, only on mobile
+.blogWrapper
+  padding-left: 15px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin:  auto
+    width:   110%
+    padding: 10px
+
+
+//This is the blog heading title, at THE TOP
+.blogHeading
+  +fontMix($font-pReg, 2.9vw)
+  line-height:    45px
+  padding-bottom: 10px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top: 10px
+    line-height: 30px
+    font-size:   4.5vw
+
+/*THIS IS THE LEFT COLUMN STYLING, UPPER CONTENT FOR MOBILE*/
+//This is the subtitle paragraph
+.subtitleParagraph
+  @extend .agdParagraph
+  color: 		   $midnight-blue
+  padding-bottom: 20px
+  font-size:      2.5vw
+
+//This is the main content styling
+.mainContent
+  @extend .summaryParagraph
+  text-align: left
+  font-size:  2.2vw
+  width:      98%
+	 @media only screen and (max-width: 600px)
+	  font-size: 4.9vw
+    width:     70%
+
+
+/*THIS IS THE RIGHT COLUMN STYLING, DOWN CONTENT FOR MOBILE*/
+.nameHeadingRight
+  @extend .aboutMeHeading
+  font-size:      2.5vw
+  padding-bottom: 0px
+
+//This is the picure on the rigth side, below the name
+.jayAriasPicture
+  display:       block
+  margin-left:   auto
+  margin-right:  auto
+  width:         45%
+
+//This is the picture for the top, where the title is at
+#mainPictureTop
+  @extend .jayAriasPicture
+
+
+//THis is the main takeway keypoints in the right
+.mainTakewayHeader
+  color: $midnight-blue
+
+
+//Main Content, the actual article sizing & styling
+.mainContent
+  +fontMix($font-hReg, 2vw)
+  line-height: 35px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:   2.5vw
+    line-height: 20px
+
+
+//This is the main takaways in list form
+.mainTakeawyListItem
+  color: $dark-aquamarine
+  padding-bottom: 5px
+  display: inline-block
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    display: block
+    padding-top: 5px
+
+
+/*STYLING FOR "What To Read Next" Below, mainly extending */
+//Read Next Header
+.readNext
+  padding-top: 10px
+  color:       $midnight-blue
+
+//Entire list color styling
+.readNextList
+  color: $dark-aquamarine
+  list-style: none
+
+//Read Next List Item
+.readNextListItem
+  padding-bottom: 5px
+
+
+
+/*STYLING FOR "SOCIAL SITE LINKS"*/
+
+//Read Next Header
+.followMeOnSocial
+  @extend .readNext
+//List styling
+.socialSiteList
+  @extend .readNextList
+
+
+/* STYLING FOR BOOK CALL TO ACTION CARD */
+//THE CTA IS FOR THE BOOK CTA STYLING
+.warningCTA
+  +fontMix($font-hReg, 0.7vw)
+  padding-top:    5px
+  padding-bottom: 5px
+  color: $dark-aquamarine
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 2vw
+    width:     80%
+
+
+//THE BOTTOM IS THE PODCAST STYLING CAUTION STYLING
+.warningPod
+  @extend .warningCTA
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 2vw
+    width:     80%
+
+
+
+/*FACEBOOK COMMENT HEADER BELOW*/
+.facebookComments
+  color:       $black
+  font-size:   1.2vw
+  text-align:  center
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:   2.8vw
+
+//SHARE CALL TO ACTION
+.shareCTA
+  text-align:     center
+  font-size:      1.2vw
+  padding-bottom: 20px
+  text-transform: capitalize
+  color: $midnight-blue
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:   2.8vw
+
+//FOLLOW CTA
+.followCTA
+  @extend .shareCTA
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:   2.8vw

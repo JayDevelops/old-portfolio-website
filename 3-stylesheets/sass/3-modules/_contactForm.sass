@@ -1,0 +1,206 @@
+/* CONTACT FORM ACTUAL FORM STYLING IS HERE
+  FIRST MOBILE THEN DESKTOP. THIS WILL BE
+  EXPORTED TO THE DIRECTORY '../2-pages/ContactPage.sass'*/
+
+
+/*ENTIRE CONTACT FORM PLACEMENT*/
+.contact-form-input
+  position: absolute
+  z-index:  10
+  padding-top: 280px
+  padding-left: 10px
+
+
+/*headers placements of the contact form*/
+.header
+  padding-top:  0.8em
+  padding-bottom: 0.3em
+  color: $white
+  & p
+    +fontMix($font-hLight, 4.7vw)
+    letter-spacing: 0.5px
+
+/*HEADER PLACEMENT FOR NAME ONLY*/
+.header-name
+  color: $white
+  padding-bottom: 0px
+  +fontMix($font-hLight, 4.7vw)
+
+
+/*EACH INDIVIDUAL FORM CON PADDING AND STUFF*/
+.form-con
+  width:      20.05em
+  background: $white
+  color:      $black
+  outline:    none
+  border:     none
+  border-bottom: 1px solid $midnight-blue
+  +fontMix($font-pReg, 4vw)
+  +border-radius-kit(4px)
+  padding-bottom: 1.4em
+  margin-bottom: 1em
+
+
+/*SUBMIT BUTTON FOR CONTACT FORM*/
+form .submit input
+  box-sizing:   content-box
+  text-align:   center
+  +fontMix($font-hReg, 5vw)
+  +border-radius-kit(2px)
+  background-color: $midnight-blue
+  color:            $white
+  border-color:     transparent
+  letter-spacing:   2px
+  width:            15.8em
+  height:           2.2em
+  line-height:      42px
+  &:hover
+    background-color: $white
+    cursor:     pointer
+    transition: all 0.5s ease-in-out
+    +scaleObject(1.1)
+/*END OF THE CONTACT FORM RIGHT ABOVE*/
+
+
+
+
+
+/*START OF THE CONTACT OPTION STYLING HERE*/
+.contact-options
+  position: absolute
+  padding-top: 680px
+  z-index: 1
+  padding-left: 0.52em
+  color: $white
+
+/*HEADINGS STYLING HERE*/
+.email-title
+  border-bottom: 1.1px solid $midnight-blue
+  padding-top: 2em
+  +fontMix($font-hReg, 8vw)
+
+.my-hours-title
+  @extend .email-title
+
+.my-instagram-title
+  @extend  .email-title
+
+/*PARAGRAPHS STYLING UNDER THE HEADINGS IS HERE*/
+.email-actual
+  +fontMix($font-pLight, 5vw)
+  padding-left:   0.1em
+  letter-spacing: 2px
+
+.hours
+  @extend .email-actual
+
+.instagram-availability
+  @extend .email-actual
+
+.zombie
+  position: absolute
+  +fontMix($font-hLight, 5vw)
+  color: $white
+  top:   172.3%
+  left:  2%
+
+
+
+
+
+/* DESKTOP STYLING OF THINGS BELOW HERE*/
+
+
+@media (min-width: 600px)
+  .contact-form-input
+    padding-top: 400px
+
+  /*EACH INDIVIDUAL FORM CON PADDING AND STUFF*/
+  .form-con
+    width:  25em
+    +fontMix($font-pReg, 1.4vw)
+
+  /*headers placements of the contact form*/
+  .header
+    padding-top:    1em
+    padding-bottom: 1em
+    color: $white
+
+  /*HEADER styling FOR NAME ONLY*/
+  .header-name p
+    color: $white
+    padding-bottom: 0px
+    +fontMix($font-hLight, 1.4vw)
+
+  /*HEADER Stylings*/
+  .header p
+    color: $white
+    padding-bottom: 0px
+    +fontMix($font-hLight, 1.4vw)
+
+  /*SUBMIT BUTTON FOR CONTACT FORM*/
+  form .submit input
+    width:  17.2em
+    height: 1.8em
+    padding-left: 10px
+    padding-top:  5px
+    background-color: $midnight-blue
+    border: none
+    +fontMix($font-hReg, 2vw)
+
+
+  .desktop-placement
+    position: absolute
+    left: 2%
+
+
+
+
+
+
+  /*START OF THE CONTACT OPTION STYLING HERE*/
+  .zombie
+    position: absolute
+    top:  111%
+    left: 70%
+    font-size: 1.4vw
+
+  .contact-options
+    position: absolute
+    left: 70%
+    padding-top:  350px
+    z-index: 1
+    padding-left: 0.52em
+    color: $white
+
+  /*HEADINGS STYLING HERE*/
+  .email-title
+    border-bottom: 1.1px solid $midnight-blue
+    padding-top: 2.1em
+    font-size: 3vw
+
+  .my-hours-title
+    border-bottom: 1.1px solid $midnight-blue
+    padding-top: 2.1em
+    font-size: 3vw
+
+  .my-instagram-title
+    border-bottom: 1.1px solid $midnight-blue
+    padding-top: 2.1em
+    font-size: 3vw
+
+  /*PARAGRAPHS STYLING UNDER THE HEADINGS IS HERE*/
+  .email-actual
+    +fontMix($font-pLight, 1.4vw)
+    padding-left:   0.5em
+    letter-spacing: 2px
+
+  .hours
+    +fontMix($font-pLight, 1.4vw)
+    padding-left:   0.5em
+    letter-spacing: 2px
+
+  .instagram-availability
+    +fontMix($font-pLight, 1.4vw)
+    padding-left:   0.5em
+    letter-spacing: 2px

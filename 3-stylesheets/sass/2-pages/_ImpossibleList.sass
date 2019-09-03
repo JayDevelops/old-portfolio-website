@@ -1,0 +1,183 @@
+//This is the main header, Impossible List
+.impossibleHeader
+  margin-top:    120px
+  text-align:    center
+  +fontMix($font-pReg, 3vw)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin-top: 40px
+    font-size:  5vw
+
+//This is the top picture styling
+#topPicture
+  display:       block
+  margin-left:   auto
+  margin-right:  auto
+  width:         20%
+  margin-top:    40px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width: 40%
+
+//This is the begining paragraph, explanation
+.explainListParagraph
+  color:       $black
+  line-height: 35px
+  width:       80%
+  +paddingSizing(20px, 20px, 0px, 0px)
+  +fontMix($font-pLight, 1.5vw)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width:       80%
+    line-height: 20px
+    font-size:   2.89vw
+
+
+//This is the picture with the slide
+.fearPic
+  @extend #topPicture
+  width: 60%
+  margin-top: -15px
+  margin-bottom: 10px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width:       55%
+    margin-top: -15px
+
+
+//This is the styling for explaining in depth of the list containments
+.explainInDepth
+  @extend .explainListParagraph
+
+
+
+
+/*THIS IS THE MAIN LIST CONTENT WRAPPER AND
+ EVERYTHING IN BETWEEN. DON'T FORGET, ONE LIST
+ STYLING CLASS NAME FOR ALL OF THE LISTS!*/
+
+//THE WHOLE WRAPPER WIDTH, ETC...
+.mainListWrapper
+  width: 80%
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    width: 80%
+
+//Current goals header
+.currentGoals
+  color:           $midnight-blue
+  padding-top:     100px
+  padding-bottom:  10px
+  text-decoration: underline $dark-aquamarine
+  +fontMix($font-pReg, 2vw)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size:       3vw
+    padding-top:     40px
+
+//List paragraph, for all the paragraphs inside this wrapper
+.listPar
+  @extend .explainListParagraph
+  width: 100%
+
+//Recently Completed List
+.recentlyCompleted
+  @extend .currentGoals
+  padding-top:   40px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top: 10px
+
+
+
+
+
+
+
+
+
+
+/*THIS IS THE LIST STYLING WHICH WILL BE SHARED
+ WITH EACH CLASS UNDER THIS NAME, DON'T FORGET*/
+
+//Impossible List Header start
+.impossibleListHeader
+  @extend .recentlyCompleted
+  color:          $black
+  padding-top:    60px
+  padding-bottom: 20px
+  font-size:      3.5vw
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top: 20px
+
+
+//This is the basic header, not the sub section ones
+.basicImpossibleHead
+  @extend .recentlyCompleted
+  color:           $black
+  font-size:       2.5vw
+  text-decoration: underline $midnight-blue
+  padding-bottom:  10px
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top:     -10px
+    padding-bottom:  10px
+
+//These are the sub-headers under each main goals
+.subImpossibleHeader
+  @extend .basicImpossibleHead
+  font-size: 2vw
+  text-decoration: underline $dark-aquamarine
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top:     -10px
+    padding-bottom:  10px
+//The entire impossible list wrapper
+.impossibleList
+  padding-top:    10px
+  padding-bottom: 10px
+  list-style:     none
+  color:          $black
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-top: -10px
+    font-szie:    2vw
+
+//Let's change the bullet color only
+.impossibleListItem::before
+  content:      "\2022"
+  color:        $dark-aquamarine
+  font-weight:  bold
+  display:      inline-block
+  width:        2em
+  margin-left:  -1em
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin-left: 0em
+    font-size: 4vw
+
+//Now we'll change the padding and sizing here for the list item
+.impossibleListItem
+  width:          90%
+  padding-bottom: 15px
+  +fontMix($font-pLight, 1.8vw)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    padding-bottom: 0px
+    font-szie:      2vw
+
+
+//THIS IS THE STYLING FOR THE SUB LISTS/SUB GOALS
+.subListimpossibleList
+  @extend .impossibleList
+
+//Sub List Item Styling BEFORE below
+.subimpossibleListItem::before
+  @extend .impossibleListItem::before
+
+//Sub List Item Below Sizing
+.subimpossibleListItem
+  @extend .impossibleListItem
+  width:     80%
+  font-size: 1.3vw

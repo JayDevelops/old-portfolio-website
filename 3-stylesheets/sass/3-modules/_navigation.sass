@@ -1,0 +1,129 @@
+/* Transition for all elements */
+#main
+  transition: margin-left .8s
+  padding:    0px
+
+/* NAVIGATION STYLING FOR MOBILE FIRST THEN DESKTOP */
+.mobileNavigation
+  overflow-x: hidden
+  height:     100%
+  width:      0
+  position:   fixed
+  z-index:    10
+  top:        0px
+  left:       0
+  background:  $midnight-blue
+  transition:  all ease-in-sine 0.8s
+  padding-top: 70px
+  z-index:     100
+  & a
+    color:           $white
+    display:         block
+    text-decoration: none
+    transition:      all ease-in-sine 0.8s
+    line-height:     30px
+    +fontMix($font-hReg, 7vw)
+    +paddingSizing(5px, 20px, 20px, 50px)
+    &:hover
+      opacity: 0.7
+      transform: scale(1.1)
+
+
+/* LINK PLACEMENT AKA THE 'a' */
+.links
+  padding-top: 60px
+
+/* Open Button Stylings */
+.openBtn
+  +fontMix($font-pReg, 7.6vw)
+  text-decoration: none
+  color:           $black
+  position:        fixed
+  padding-left:    5px
+  @media (min-width: 600px)
+    display: none
+
+
+/* Closing Button Styling */
+.closeBtn
+  +fontMix($font-hReg, 5vw)
+  position: absolute
+  left:     75%
+  top:      0px
+/* END OF MOBILE NAVIGATION */
+
+
+
+
+
+
+/* LETS HIDE THE DESKTOP NAV FROM MOBILE DEVICES
+   BEFORE WE DO ANY OTHER DEVICES IN THE BOTTOM*/
+@media (max-width: 601px)
+  .desktopNavigation
+    display: none
+
+
+/* STYLING FOR SMALLEST IPADS, (DEVICES SMALLER THAN 600PX) GO HERE*/
+@media (min-width: 600px)
+  .desktopNavigation
+    position: fixed
+    top:      -30px
+    left:     -10px
+    margin:   0
+    width:    110%
+    z-index:  100
+    +fontMix($font-hReg, 2.8vw)
+    +paddingSizing(0px, 0px, 0px, 40px)
+    background-color: $midnight-blue
+  /*CHANGING THE FONT SIZE FOR LINKS*/
+  .links
+    & a
+      text-align:      center
+      text-decoration: none
+      padding-bottom:  40px
+      padding-right:   15px
+      &:visited
+        color: $dark-aquamarine
+      &:active
+        color: $lightest-gray
+      &:hover
+        color: $pastel-blue
+
+/*END OF IPAD SIZES*/
+
+
+
+
+
+
+
+
+
+/* STYLING FOR DESKTOP NAVIGATION IS HERE */
+
+/* NOW LETS STYLE THE NAVIGATION FOR DESKTOP */
+@media (min-width: 1200px)
+  .desktopNavigation
+    position: fixed
+    width:    110%
+    margin:   0
+    top:     -40px
+    z-index:  100
+    background-color: $midnight-blue
+    +fontMix($font-hReg, 2.8vw)
+    +paddingSizing(0px, 10px, 80px, 40px)
+
+
+  .links
+    & a
+      text-align:      center
+      text-decoration: none
+      padding-bottom:  30px
+      padding-right:   15px
+      &:visited
+        color: $white
+      &:active
+        color: $lightest-gray
+      &:hover
+        color: $pastel-blue

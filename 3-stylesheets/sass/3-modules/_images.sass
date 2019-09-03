@@ -1,0 +1,56 @@
+/* STYLING FOR ALL IMAGES START HERE */
+
+/* !STYLING FOR THE HOME PAGE IMAGES START HERE! */
+.content-bg
+  position: absolute
+  z-index: -5
+  width:  100%
+  height: 100%
+  +blur-image(0.7px)
+
+.grey-overlay
+  @extend .content-bg
+  background: $grey
+  z-index: -1
+  opacity: 0.23
+
+/*! SECOND HOME IMAGE STYLING AND PLACEMENT GOES HERE !*/
+.background-two
+  @extend .content-bg
+  top: 100%
+  +blur-image(0.9px)
+
+
+
+
+
+
+/*STYLING FOR ALL CONTACT IMAGES FOR THE CONTACT PAGE START HERE
+ CAN BE FOUND IN '3-modules/_images.sass' DIRECTORY */
+
+.contact-landing-bg
+  @extend .content-bg
+
+/* GREY OVERLAY FOR CONTACT PAGE LANDING IMAGE */
+.grey-overlay-contact
+  @extend .grey-overlay
+  width:  100%
+  height: 100%
+
+
+
+
+
+
+
+
+/* STYLING FOR PORTFOLIO IMAGES GO BELOW HERE*/
+// IMAGE LANGDING FOR PORTFOLIO
+.portfolio-image-overlay
+  @extend .content-bg
+
+//Overlay for grey overlay on portfolio
+.grey-overlay-portfolio
+  @extend .grey-overlay
+  width:  100%
+  height: 100%

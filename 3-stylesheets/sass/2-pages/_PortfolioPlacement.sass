@@ -1,0 +1,127 @@
+/* ANY IMAGES STYLING GOES HERE FOR PORTFOLIO */
+@import "../3-modules/images"
+
+
+
+
+/* PLACEMENT OF TEXT GOES BELOW HERE,
+   UNIVERSAL STYLING WILL BE IN 1-BASE*/
+.headings
+  text-align:  center
+  padding-top: 200px
+
+.tour
+  font-size: 10vw
+  text-shadow: 1px 1px 4px $midnight-blue
+
+.skills
+  padding-top: 20px
+  text-shadow: 1px 2px 2px $black
+
+
+//Button placement
+.button-placement
+  padding-left: 27vw
+  padding-top:  10vh
+
+//Button styling
+#buttDiv
+  background-color: $midnight-blue
+  color:  $white
+  border: none
+  width:  180px
+  +paddingSizing(6px, 5px, 5px, 5px)
+  +fontMix($font-pReg, 5vw)
+  +border-radius-kit(4px)
+
+//Button resume placement here
+.buttonResume-placement
+  @extend .button-placement
+  padding-top: 4vh
+
+//Button styling for resume here
+#resumeButton
+  @extend #buttDiv
+  background-color: $white
+  color:            $black
+
+
+
+
+
+/* MODAL TEXT STYLING AND PLACEMENT GOES HERE */
+
+//Modal HEadings placement goes here
+.modal-headings
+  position: absolute
+  top:      100%
+
+//Lets give some space between those headings
+.modal-title
+  +paddingSizing(10px, 8px, 4px, 5px)
+  +fontMix($font-pReg, 10vw)
+
+//subtitle
+.modal-subtitle
+  font-family:  $font-pLight
+  padding-left: 5px
+  color:        $white
+
+//explanation
+.explain
+  padding-top:  12px
+  padding-left: 5px
+
+
+
+
+
+/* SECOND SECTION IS HERE */
+
+
+
+
+
+/* STYLINGS FOR DESKTOP GOES BELOW HERE */
+@media (min-width: 600px)
+  //modal all titles position
+  .modal-headings
+    padding-top:  20px
+  //Subtitle resizing
+  .modal-subtitle
+    font-size: 4.5vw
+    padding-left: 15px
+
+  //explain of the modal
+  .explain
+    font-size: 2.5vw
+    padding-left: 15px
+
+
+  //Now that pesky button styling
+  #buttDiv
+    width: 400px
+    font-size:   2.8vw
+    padding-top: 12px
+    &:hover
+      background-color: $white
+      color:            $black
+
+  //That peksy button placement
+  .button-placement
+    padding-left: 35vw
+    padding-top:  4vh
+    transition: all 0.4s ease-in
+    &:hover
+      +scaleObject(1.1)
+
+  //That second button of resume here
+  #resumeButton
+    &:hover
+      background-color: $midnight-blue
+      color:            $white
+
+
+
+/*MODAL STYLING GOES HERE AND LOCATED IN A SEPERATE FILE*/
+@import "../3-modules/modal.sass"

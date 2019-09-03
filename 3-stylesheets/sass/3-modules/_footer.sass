@@ -1,0 +1,99 @@
+/* FOOTER STYLING STARTS HERE, FIRST MOBILE THEN DESKTOP*/
+footer
+  position: absolute
+  width:  100%
+  height: 60%
+  top: 200%
+  z-index: 10
+  background-color: white
+
+
+/* TO GET RID OF BULLETS STYLING */
+.social
+  list-style-type: none
+  text-align:      right
+  & li
+    list-style-type: none
+    display: inline
+
+/* IMAGE PADDING AND SIZING TO ALL FOOTER IMAGES*/
+.social img
+  width: 30%
+  +paddingSizing(150px, 0px, 0px, 30px)
+  border: 0
+  opacity: 0.85
+  display: inline
+
+/* LOGO STYLING */
+#logo
+  position: absolute
+  top: 10%
+  left: 31.8%
+  width: 35%
+
+/* MESSAGE STYLING GOES HERE */
+.message-footer
+  position: absolute
+  color: $black
+  opacity: 0.8
+  padding-top: 40px
+  padding-left: 90px
+  +fontMix($font-hReg, 5.3vw)
+
+  //!FOR IPHONE 6, 7, 8 REGULAR DEVICES
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    padding-left:  120px
+
+
+//Let's fix the pod image icon here
+.podImage
+  max-height: 200px
+  max-widht:  300px
+
+
+
+
+
+
+
+
+
+/*STYLING FOR DESKTOP STARTS HERE*/
+@media (min-width: 600px)
+  /*FOOTER STYLING FOR DESKTOP HEIGHT, WIDTH*/
+  footer
+    width: 100%
+    height: 10%
+
+  /* LOGO STYLING, WIDTH AND HEIGHT FOR DESKTOP*/
+  #logo
+    position: absolute
+    padding-top: 20px
+    left:  42%
+    width: 12%
+
+  /*PLACING THE IMAGES IN DESKTOP FOOTER*/
+  .desktop-footer-placement
+    top: 0
+    left: 0
+    padding-right: 545px
+    padding-top:   200px
+
+  /*SOCIAL IMG, HOVER FOR DESKTOP*/
+  .social
+    & img
+      width:   15%
+      border:  0
+      opacity: 0.85
+      +paddingSizing(10px, 10px, 10px, 10px)
+      &:hover
+        transition: all 0.5s ease-in-out
+        opacity:    1
+        +scaleObject(1.3)
+
+  /*MESSAGE FOOTER STYLING FOR DESKTOP */
+  .message-footer
+    padding-bottom: 20px
+    font-size:      1.8vw
+    top:  420%
+    left: 35%

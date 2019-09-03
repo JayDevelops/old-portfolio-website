@@ -1,0 +1,160 @@
+
+/*Name & Passion (Occupation) syling below*/
+
+/*FIRST BACKGROUND OF THE SECTION PAGE*/
+.bgBlue
+  background-color: $midnight-blue
+  position:         absolute
+  width:            100%
+  height:           100%
+  z-index:          -5
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    margin-top: -20px
+
+//This is the whole text being moved up & down
+.mainText
+  text-align:   left
+  padding-top:  230px
+  width:        50%
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    padding-top:  80px
+    width:        80%
+
+//Name "Jay Arias" styling
+.jayName
+  color:          $white
+  text-transform: uppercase
+  +fontMix($font-pReg, 4vw)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    padding-bottom: 10px
+    font-size:      8vw
+
+//Passion styling here
+.jayOccupation
+  color:          $lightest-gray
+  text-transform: capitalize
+  padding-top:    10px
+  +fontMix($font-pLight, 2vw)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size: 5vw
+
+//ContactImage PNG Styling
+.jayImageContact
+  float:      right
+  max-width:  350px
+  display:    block
+  margin-top: 130px
+  max-width:  900px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    outline:                none
+    text-decoration:        none
+    -ms-interpolation-mode: bicubic
+    clear:      both
+    border:     0
+    height:     auto
+    float:      none
+    width:      100%
+    max-width:  350px
+    display:    block
+    margin-top: 136px
+
+//Button Styling Below
+.leaveAMessageButton
+  background-color: $dark-aquamarine
+  color:            $white
+  border:           none
+  text-transform:   uppercase
+  margin-top:       30px
+  margin-left:      350px
+  +fontMix($font-pReg, 1vw)
+  +paddingSizing(15px, 15px, 20px, 20px)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    +paddingSizing(15px, 15px, 15px, 15px)
+    font-size:   3.2vw
+    margin-top:  20px
+    margin-left: 40px
+    margin-top:  10px
+
+
+
+
+
+/*SECOND CONTENT OF THE SECTION PAGE, STYLING*/
+//BG black for second section
+.bgBlack
+  background-color: $black
+  position:         absolute
+  width:    100%
+  height:   100%
+  top:      101%
+  z-index:  -5
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    background-color: $black
+    position:         absolute
+    top:              99.5%
+
+
+//textAboutMe styling, moves whole text up and down
+.headerAboutMeText
+  @extend .mainText
+  margin-top: 280px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    width:       90%
+    margin-top: -5px
+
+//About Me styling, header
+.aboutMeHeader
+  @extend .jayName
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size: 6vw
+
+
+//About Me second heading (Joke), styling
+.aboutMeJoke
+  @extend .jayOccupation
+  color: $midnight-blue
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size: 5vw
+    padding-top: 10px
+    line-height: 10px
+
+
+//Pargraph of About Me, styling
+.aboutMeParagraph
+  +fontMix($font-hReg, 2vw)
+  color:      $white
+  width:      50%
+  margin-top: -230px
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    font-size:  4.5vw
+    margin-top: -200px
+    width:      90%
+
+//Bottom Contact Button
+#bottomContactButton
+  background-color: $dark-aquamarine
+  color:            $white
+  border:           none
+  text-transform:   uppercase
+  margin-left:      350px
+  margin-top:       30px
+  +fontMix($font-pReg, 1vw)
+  +paddingSizing(15px, 15px, 20px, 20px)
+  //Anything smaller than an iPhone 8plus
+  @media only screen and (max-width: 600px)
+    +paddingSizing(15px, 15px, 15px, 15px)
+    font-size:    3.2vw
+    margin-left:  100px
+    margin-right: 80px
+    margin-top:   40px

@@ -1,0 +1,33 @@
+
+// BELOW IS THE TYPED TEXT, THE MAGIC WITH JAVASCRIPT!
+#typedText
+  color:            $white
+  font-family:      $font-pReg
+  font-size:        25px
+  margin-top:       0px
+  text-align:       center
+  +paddingSizing(100px, 100px, 50px, 50px)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    margin-top: -20px
+    padding-top: 300px
+    font-size:   30px
+
+//BELOW IS THE STYLE OF THE DIV WITH BUTTONS
+.buttonWrapper
+  display: none //This will change with our javascript
+
+//Start buttons styling here
+.startButtons
+  display:         none
+  margin-top:      15px
+  font-size:       1vw
+  border-radius:   2px
+  border:          none
+  color:           $white
+  text-decoration: none
+  background-color: $midnight-blue
+  +paddingSizing(10px, 10px, 30px, 30px)
+  //!FOR IPHONES (MOBILE DEVICES)
+  @media only screen and (max-width: 600px)
+    font-size: 2.2vw
